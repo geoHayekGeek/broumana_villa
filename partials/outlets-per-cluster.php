@@ -13,7 +13,18 @@
                 <div class="outlets-btn-container mt-2">
                     <a href="<?php echo SITE_URL; ?>/outlet.php?id=<?= htmlspecialchars($outlet['id']) ?>" target="_blank" class="custom-button-2 explore-btn">About us</a>
                     <a href="<?php echo SITE_URL; ?>/gallery.php?id=<?= htmlspecialchars($outlet['id']) ?>&type=2" target="_blank" class="custom-button-2 menu-btn">Gallery</a>
+                    <?php 
+                        if($outlet["has_menu"] == 1) {
+                    ?>
+
                     <a href="<?= htmlspecialchars($outlet['menu']) ?>" target="_blank" class="custom-button-2 menu-btn">Menu</a>
+
+                    <?php 
+
+                    }
+
+                    ?>
+
                 </div>
             </div>
         <?php endforeach; ?>
