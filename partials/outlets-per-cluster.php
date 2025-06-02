@@ -1,5 +1,5 @@
 <div class="container fade-in-target">
-    <p class="custom-heading">The Villa's Outlets</p>
+    <p class="custom-heading">The <?= htmlspecialchars($name_second) ?>'s Outlets</p>
     <div class="cluster-outlets-container row" id="outlets-container">
         <?php foreach ($outlets as $outlet): ?>
             <div class="col-md-3 clickable-div-outlet">

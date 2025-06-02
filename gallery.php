@@ -1,7 +1,7 @@
 <?php
 // outlet.php
 
-require_once './backend/db.php';
+
 
 function getOutletById($id)
 {

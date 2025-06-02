@@ -600,6 +600,10 @@ button:focus:not(:focus-visible) {
 }
 
 /** Outlets Per Cluster Styling */
+.tab-content-all-outlets {
+  width: 100%!important;
+}
+
 .cluster-outlets-container {
   gap: 20px;
   justify-content: center;

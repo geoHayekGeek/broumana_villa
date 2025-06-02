@@ -6,7 +6,7 @@
                 <?php echo $aboutText; ?>
             </p>
             <div class="about-button-container">
-                <a target="_blank" href="" class="custom-button">Contact Us</a>
+                <a target="_blank" href="<?= SITE_URL ?>/contact-us" class="custom-button">Contact Us</a>
             </div>
         </div>
         <div class="col-md-6 about-images-container">

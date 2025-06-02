@@ -1,6 +1,4 @@
 <?php
-require_once './backend/db.php';
-
 function getClusterById($id)
 {
     global $conn;
@@ -18,8 +16,29 @@ function getClusterById($id)
     }
 }
 
+function getOutletsByClusterId($id)
+{
+    global $conn;
+
+    $sql = "SELECT * FROM outlets WHERE cluster_id = ? ORDER BY display_order";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $outlets = [];
+
+    while ($row = $result->fetch_assoc()) {
+        $outlets[] = $row;
+    }
+
+    return $outlets;
+}
+
 $clusterId = 3;
 $type = 1;
+
+$outlets = getOutletsByClusterId($clusterId);
 
 $cluster = getClusterById($clusterId);
 
@@ -31,10 +50,10 @@ if (!$cluster) {
 
 
 <?php
-$bannerTitle = "Broumana";
-$bannerSubtitle = "Square";
-// $bannerLogo = $cluster["logo"];
 $bannerLogo = $cluster["secondary_logo"];
+
+$name_second = explode(" ", $cluster["name"])[1];
+
 $contactBtnText = "Contact Us";
 $scrollText = "Scroll";
 

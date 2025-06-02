@@ -19,6 +19,22 @@ function getClusters()
     }
 }
 
+function getOutletsOrdered()
+{
+    global $conn;
+
+    $sql = "SELECT * FROM outlets ORDER BY display_order";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) { 
+        return $result->fetch_all(MYSQLI_ASSOC);
+    } else {
+        return [];
+    }
+}
+
 function getHomeInfo()
 {
     global $conn;
@@ -37,6 +53,8 @@ function getHomeInfo()
 
 
 $clusters = getClusters();
+$outlets = getOutletsOrdered();
+
 $company = getHomeInfo();
 
 $aboutText = $company["about_text"];

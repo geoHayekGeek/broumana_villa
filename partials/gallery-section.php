@@ -105,7 +105,7 @@ function renderMedia($src, $alt = '', $isSecondary = false) {
         <?php endforeach; ?>
 
         <div class="d-flex justify-content-center">
-            <a href="<?php echo SITE_URL; ?>/gallery.php?id=<?php echo $placeId; ?>&type=<?php echo $type; ?>" class="custom-button">View More</a>
+            <a href="<?php echo SITE_URL; ?>/gallery.php?id=<?php echo $placeId; ?>&type=<?php echo $type; ?>" class="custom-button">Go To Gallery</a>
         </div>
     </div>
 </div>
