@@ -1,6 +1,6 @@
+<?php include_once "./includes/header.php"; ?>
+
 <?php
-
-
 function getClusterById($id)
 {
     global $conn;

@@ -1,5 +1,5 @@
 <?php
-
+include_once "./includes/header.php";
 require_once "./backend/db.php";
 function getContactInfo()
 {
@@ -26,8 +26,6 @@ $company_info = getContactInfo();
 $backgroundImage = 'divvyxcantine.jpg'
 
 ?>
-
-<?php include_once "./includes/header.php"; ?>
 
 <?php include_once "./partials/contact-banner.php"; ?>
 <div class="space mb-3 mb-md-5 pb-2 pb-md-3"></div>

@@ -1,6 +1,6 @@
+<?php include_once "./includes/header.php"; ?>
+
 <?php
-
-
 function getClusterById($id)
 {
     global $conn;
@@ -67,8 +67,6 @@ $aboutImage = $cluster["about_image"];
 
 $gallery = json_decode($cluster["gallery"], true);
 ?>
-
-<?php include_once "./includes/header.php"; ?>
 
 <?php include_once "./partials/banner-cluster.php" ?>
 <div class="space mb-3 mb-md-5 pb-2 pb-md-3"></div>

@@ -1,8 +1,6 @@
+<?php include_once "./includes/header.php"; ?>
+
 <?php
-// outlet.php
-
-
-
 function getOutletById($id)
 {
     global $conn;
@@ -49,8 +47,6 @@ $gallery = json_decode($outlet["gallery"], true);
 
 $type = 2;
 ?>
-
-<?php include_once "./includes/header.php" ?>
 
 <?php include_once "./partials/banner-outlet.php" ?>
 <div class="space mb-3 mb-md-5 pb-2 pb-md-3"></div>

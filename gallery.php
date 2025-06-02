@@ -1,8 +1,4 @@
 <?php
-// outlet.php
-
-
-
 function getOutletById($id)
 {
   global $conn;

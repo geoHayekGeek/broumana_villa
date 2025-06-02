@@ -1,0 +1,4 @@
+# Ignore sensitive configuration files
+config.php
+db.php
+.htaccess
