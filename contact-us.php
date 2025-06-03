@@ -138,7 +138,7 @@ $backgroundImage = 'divvyxcantine.jpg'
         e.preventDefault();
 
         grecaptcha.ready(function() {
-            grecaptcha.execute('YOUR_SITE_KEY', {
+            grecaptcha.execute('6Ldb5lQrAAAAACIlgt81N0a99IVR8oMcCqILlqq_', {
                 action: 'submit'
             }).then(function(token) {
                 submitContactForm(token); // pass the token to your function
