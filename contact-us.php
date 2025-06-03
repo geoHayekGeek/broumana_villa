@@ -107,6 +107,8 @@ $backgroundImage = 'divvyxcantine.jpg'
 
                     <button type="submit" class="custom-button-transparent-green">Send Message</button>
                 </form>
+
+                <div class="g-recaptcha mb-3" data-sitekey="6Ldb5lQrAAAAACIlgt81N0a99IVR8oMcCqILlqq_"></div>
             </div>
 
             <!-- Map Column -->
@@ -130,4 +132,59 @@ $backgroundImage = 'divvyxcantine.jpg'
 <div class="space mb-3 mb-md-5 pb-2 pb-md-3"></div>
 
 <div class="space mt-3 mt-md-5 pt-2 pt-md-3"></div>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const firstName = form.firstName.value.trim();
+        const lastName = form.lastName.value.trim();
+        const email = form.email.value.trim();
+        const phone = form.phone.value.trim();
+        const message = form.message.value.trim();
+        const recaptchaToken = grecaptcha.getResponse();
+
+        if (!firstName || !lastName || !email || !message) {
+            alert("Please fill out all required fields.");
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        if (!recaptchaToken) {
+            alert("Please verify you are not a robot.");
+            return;
+        }
+
+        const response = await fetch('<?php echo SITE_URL; ?>/backend/contact-form-handler.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                firstName,
+                lastName,
+                email,
+                phone,
+                message,
+                recaptchaToken
+            })
+        });
+
+        const result = await response.json();
+        alert(result.message);
+
+        if (response.ok) {
+            form.reset();
+            grecaptcha.reset(); // Reset the CAPTCHA
+        }
+    });
+</script>
+
 <?php include_once "./includes/footer.php"; ?>
