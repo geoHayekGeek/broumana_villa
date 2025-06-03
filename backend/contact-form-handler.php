@@ -27,11 +27,16 @@ $recaptchaVerifyUrl = "https://www.google.com/recaptcha/api/siteverify";
 $response = file_get_contents($recaptchaVerifyUrl . "?secret=" . urlencode($recaptchaSecret) . "&response=" . urlencode($recaptchaToken));
 $responseData = json_decode($response);
 
-if (!$responseData->success) {
+if (
+    !$responseData->success ||
+    $responseData->score < 0.5 ||  // 👈 Checks if score is too low (possible bot)
+    $responseData->action !== 'submit' // 👈 Optional: ensure correct action
+) {
     http_response_code(400);
     echo json_encode(["message" => "reCAPTCHA verification failed."]);
     exit;
 }
+
 
 // Validate input
 $firstName = trim($data['firstName'] ?? '');
