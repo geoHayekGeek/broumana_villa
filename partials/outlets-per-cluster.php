@@ -2,7 +2,7 @@
     <p class="custom-heading">The <?= htmlspecialchars($name_second) ?>'s Outlets</p>
     <div class="cluster-outlets-container row" id="outlets-container">
         <?php foreach ($outlets as $outlet): ?>
-            <div class="col-md-3 clickable-div-outlet">
+            <div class="col-md-4 col-lg-3 clickable-div-outlet">
                 <div class="outlet-img-container">
                     <img src="<?php echo SITE_URL; ?>/assets/images/outlets/<?= htmlspecialchars($outlet['image']) ?>" alt="<?= htmlspecialchars($outlet['name']) ?>" class="outlet-img">
                 </div>

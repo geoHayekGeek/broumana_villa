@@ -1,3 +1,5 @@
+<?php include_once "./includes/header.php" ?>
+
 <?php
 function getOutletById($id)
 {
@@ -104,7 +106,6 @@ if ($id !== 0) {
 }
 ?>
 
-<?php include_once "./includes/header.php" ?>
 <?php include_once "./partials/gallery-banner.php" ?>
 
 <div class="space mb-3 mb-md-5 pb-2 pb-md-3"></div>

@@ -55,15 +55,12 @@ foreach ($outlets as $outlet) {
         <ul class="nav custom-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
-                <span class="tab-separator"></span>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="villa-tab" data-bs-toggle="tab" data-bs-target="#villa" type="button" role="tab" aria-controls="villa" aria-selected="false">Broumana Villa</button>
-                <span class="tab-separator"></span>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="yard-tab" data-bs-toggle="tab" data-bs-target="#yard" type="button" role="tab" aria-controls="yard" aria-selected="false">Broumana Yard</button>
-                <span class="tab-separator"></span>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="square-tab" data-bs-toggle="tab" data-bs-target="#square" type="button" role="tab" aria-controls="square" aria-selected="false">Broumana Square</button>
@@ -75,7 +72,7 @@ foreach ($outlets as $outlet) {
                 <div class="cluster-outlets-container row" id="outlets-container">
                     <?php foreach ($outlets as $outlet) { ?>
 
-                        <div class="col-md-3 clickable-div-outlet">
+                        <div class="col-md-4 col-lg-3 clickable-div-outlet">
                             <div class="outlet-img-container">
                                 <img src="<?php echo SITE_URL; ?>/assets/images/outlets/<?= htmlspecialchars($outlet['image']) ?>" alt="<?= htmlspecialchars($outlet['name']) ?>" class="outlet-img">
                             </div>
@@ -109,7 +106,7 @@ foreach ($outlets as $outlet) {
 
                     <?php foreach ($outlets_villa as $outlet) { ?>
 
-                        <div class="col-md-3 clickable-div-outlet">
+                        <div class="col-md-4 col-lg-3 clickable-div-outlet">
                             <div class="outlet-img-container">
                                 <img src="<?php echo SITE_URL; ?>/assets/images/outlets/<?= htmlspecialchars($outlet['image']) ?>" alt="<?= htmlspecialchars($outlet['name']) ?>" class="outlet-img">
                             </div>
@@ -141,7 +138,7 @@ foreach ($outlets as $outlet) {
 
                     <?php foreach ($outlets_yard as $outlet) { ?>
 
-                        <div class="col-md-3 clickable-div-outlet">
+                        <div class="col-md-4 col-lg-3 clickable-div-outlet">
                             <div class="outlet-img-container">
                                 <img src="<?php echo SITE_URL; ?>/assets/images/outlets/<?= htmlspecialchars($outlet['image']) ?>" alt="<?= htmlspecialchars($outlet['name']) ?>" class="outlet-img">
                             </div>
@@ -174,7 +171,7 @@ foreach ($outlets as $outlet) {
 
                     <?php foreach ($outlets_square as $outlet) { ?>
 
-                        <div class="col-md-3 clickable-div-outlet">
+                        <div class="col-md-4 col-lg-3 clickable-div-outlet">
                             <div class="outlet-img-container">
                                 <img src="<?php echo SITE_URL; ?>/assets/images/outlets/<?= htmlspecialchars($outlet['image']) ?>" alt="<?= htmlspecialchars($outlet['name']) ?>" class="outlet-img">
                             </div>

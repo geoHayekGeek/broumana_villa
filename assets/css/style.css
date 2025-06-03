@@ -1044,6 +1044,7 @@ button:focus:not(:focus-visible) {
 /**Custom Tabs */
 .custom-tabs {
   border-bottom: 1px solid #dee2e6;
+  width: 100%!important;
 }
 
 .custom-tabs .nav-item {
