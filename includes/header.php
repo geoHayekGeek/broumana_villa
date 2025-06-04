@@ -6,6 +6,24 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+function getAllInfo()
+ {
+    global $conn;
+
+    $sql = "SELECT * FROM site_info";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        return $result->fetch_assoc();
+    } else {
+        return [];
+    }
+ }
+
+ $site_info = getAllInfo();
+
 
 $current_page = get_current_page();
 $page_title = isset($page_name) ? get_page_title($page_name) : get_page_title();

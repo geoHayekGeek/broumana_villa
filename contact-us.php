@@ -6,7 +6,7 @@ function getContactInfo()
 
     global $conn;
 
-    $sql = "SELECT `address`, `phone`, `email`, `address_link`, `phone_link`, `email_link` FROM company where id=1";
+    $sql = "SELECT `address`, `phone`, `email`, `address_link`, `phone_link`, `email_link` FROM site_info where id=1";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -22,7 +22,7 @@ function getContactInfo()
 
 <?php
 
-$company_info = getContactInfo();
+// $site_info = getContactInfo();
 $backgroundImage = 'divvyxcantine.jpg'
 
 ?>
@@ -38,21 +38,21 @@ $backgroundImage = 'divvyxcantine.jpg'
             <div class="col-md-4 contact-box address-box">
                 <div class="contact-box-content">
                     <div class="contact-box-title">Address</div>
-                    <a href="<?php echo $company_info["address_link"] ?>" class="contact-box-value" target="_blank"><?php echo $company_info["address"] ?></a>
+                    <a href="<?php echo $site_info["address_link"] ?>" class="contact-box-value" target="_blank"><?php echo $site_info["address"] ?></a>
                 </div>
             </div>
 
             <div class="col-md-4 contact-box address-box">
                 <div class="contact-box-content">
                     <div class="contact-box-title">Email</div>
-                    <a href="<?php echo $company_info["email_link"] ?>" class="contact-box-value" target="_blank"><?php echo $company_info["email"] ?></a>
+                    <a href="<?php echo $site_info["email_link"] ?>" class="contact-box-value" target="_blank"><?php echo $site_info["email"] ?></a>
                 </div>
             </div>
 
             <div class="col-md-4 contact-box address-box">
                 <div class="contact-box-content">
                     <div class="contact-box-title">Telephone</div>
-                    <a href="<?php echo $company_info["phone_link"] ?>" class="contact-box-value" target="_blank"><?php echo $company_info["phone"] ?></a>
+                    <a href="<?php echo $site_info["phone_link"] ?>" class="contact-box-value" target="_blank"><?php echo $site_info["phone"] ?></a>
                 </div>
             </div>
         </div>

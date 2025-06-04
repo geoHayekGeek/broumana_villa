@@ -1,5 +1,5 @@
 <div class="container clusters-section fade-in-target">
-    <p class="custom-heading">Our Clusters</p>
+    <p class="custom-heading"><?= htmlspecialchars($site_info["home_clusters_title"]) ?></p>
     <div class="row clusters-row">
         <!-- Column One -->
         <div class="col-md-4 clickable-div">

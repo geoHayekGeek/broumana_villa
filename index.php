@@ -39,7 +39,7 @@ function getHomeInfo()
 {
     global $conn;
 
-    $sql = "SELECT about_text, about_image, testimonials FROM company WHERE id=1";
+    $sql = "SELECT about_text, about_image, testimonials FROM site_info WHERE id=1";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -55,11 +55,11 @@ function getHomeInfo()
 $clusters = getClusters();
 $outlets = getOutletsOrdered();
 
-$company = getHomeInfo();
+// $site_info = getHomeInfo();
 
-$aboutText = $company["about_text"];
-$aboutImage = $company["about_image"];
-$testimonials = json_decode($company["testimonials"], true);
+$aboutText = $site_info["about_text"];
+$aboutImage = $site_info["about_image"];
+$testimonials = json_decode($site_info["testimonials"], true);
 
 $villaName = "";
 $villaDescription = "";

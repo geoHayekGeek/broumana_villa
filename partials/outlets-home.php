@@ -13,7 +13,7 @@ function renderOutletsByCluster($outlets, $clusterId) {
 ?>
 
 <div class="container outlets-section outlets-home-section fade-in-target">
-    <p class="custom-heading">Explore Our Outlets</p>
+    <p class="custom-heading"><?= htmlspecialchars($site_info["home_outlets_title"]) ?></p>
     <ul class="nav nav-pills mb-5 outlets-nav-menu" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link" id="pills-yard-tab" data-bs-toggle="pill" data-bs-target="#pills-yard" type="button" role="tab" aria-controls="pills-yard" aria-selected="false">Broumana Yard</button>
