@@ -57,7 +57,8 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.6); /* white at 80% opacity */
+  background-color: rgba(255, 255, 255, 0.6);
+  /* white at 80% opacity */
   z-index: 1030;
   transition: background-color 1s;
 }
@@ -211,6 +212,7 @@ button:focus:not(:focus-visible) {
   margin-bottom: 5px;
   font-weight: 500;
 }
+
 .clusters-heading {
   font-family: var(--font-primary);
   font-weight: 400;
@@ -218,12 +220,14 @@ button:focus:not(:focus-visible) {
   margin-bottom: 6px;
   font-size: 22px;
 }
+
 .clusters-text {
   font-size: 14px;
   line-height: 1.5;
   color: #666;
   margin-bottom: 6px;
 }
+
 .clusters-img {
   width: 100%;
   height: 100%;
@@ -231,6 +235,7 @@ button:focus:not(:focus-visible) {
   transition: transform 1s ease;
   display: block;
 }
+
 .clickable-div {
   margin-bottom: 30px;
 }
@@ -347,6 +352,7 @@ button:focus:not(:focus-visible) {
 }
 
 @media screen and (max-width: 767px) {
+
   .outlets-nav-menu .nav-item:nth-child(1),
   .outlets-nav-menu .nav-item:nth-child(3) {
     margin-top: 0;
@@ -354,7 +360,7 @@ button:focus:not(:focus-visible) {
 }
 
 .nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
+.nav-pills .show>.nav-link {
   background-color: var(--primary-color);
 }
 
@@ -506,10 +512,23 @@ button:focus:not(:focus-visible) {
 .cluster-banner-content {
   position: absolute;
   top: 50%;
-  left: 10%;
+  left: 0;
   transform: translateY(-50%);
   color: white;
   z-index: 5;
+  display: flex;
+}
+
+@media screen and (max-width: 575.98px) {
+  .cluster-banner-content {
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+  }
+
+  .outlet-banner-logo-container {
+    width: 230px !important;
+  }
 }
 
 .cluster-banner-title {
@@ -567,6 +586,7 @@ button:focus:not(:focus-visible) {
   .cluster-banner-title {
     font-size: 2.5rem;
   }
+
   .cluster-banner-subtitle {
     font-size: 2rem;
   }
@@ -601,7 +621,7 @@ button:focus:not(:focus-visible) {
 
 /** Outlets Per Cluster Styling */
 .tab-content-all-outlets {
-  width: 100%!important;
+  width: 100% !important;
 }
 
 .cluster-outlets-container {
@@ -849,7 +869,8 @@ button:focus:not(:focus-visible) {
 
 .cluster-outlets-container .outlet-img-container {
   width: 100%;
-  height: 220px; /* Fixed height for all image containers */
+  height: 220px;
+  /* Fixed height for all image containers */
   overflow: hidden;
   position: relative;
 }
@@ -903,6 +924,18 @@ button:focus:not(:focus-visible) {
   transform: translateY(-50%);
   color: white;
   z-index: 5;
+}
+
+@media screen and (max-width: 575.98px) {
+  .outlet-banner-content {
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+  }
+
+  .outlet-banner-logo-container {
+    width: 230px !important;
+  }
 }
 
 .outlet-banner-title {
@@ -968,6 +1001,7 @@ button:focus:not(:focus-visible) {
   .outlet-banner-title {
     font-size: 2.5rem;
   }
+
   .outlet-banner-subtitle {
     font-size: 2rem;
   }
@@ -1044,7 +1078,7 @@ button:focus:not(:focus-visible) {
 /**Custom Tabs */
 .custom-tabs {
   border-bottom: 1px solid #dee2e6;
-  width: 100%!important;
+  width: 100% !important;
 }
 
 .custom-tabs .nav-item {
@@ -1110,7 +1144,8 @@ button:focus:not(:focus-visible) {
   top: 0;
   left: 0;
   width: 100%;
-  height: 120%; /* Extra height for parallax effect */
+  height: 120%;
+  /* Extra height for parallax effect */
   background-size: cover;
   background-position: center;
   transform: translateZ(0);
@@ -1227,6 +1262,7 @@ button:focus:not(:focus-visible) {
   margin-bottom: 6px;
   display: block;
   color: var(--text-dark);
+  text-align: start;
 }
 
 .contact-form .form-control {

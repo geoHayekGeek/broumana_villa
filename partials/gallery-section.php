@@ -28,7 +28,7 @@ function renderMedia($src, $alt = '', $isSecondary = false) {
                 <video
                     data-src="{$fullSrc}"
                     class="{$videoClass}"
-                    playsinline muted preload="none"
+                    playsinline preload="none"
                     alt="{$escapedAlt}">
                     Your browser does not support the video tag.
                 </video>
