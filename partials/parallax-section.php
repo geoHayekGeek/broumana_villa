@@ -1,4 +1,4 @@
-<section class="parallax-section">
+<section class="parallax-section fade-in-target">
     <div class="parallax-bg" id="parallax" style="background-image: url('<?= htmlspecialchars(SITE_URL) ?>/assets/images/broumana-villa/<?= $site_info["full_background_section_bg_image"] ?>');"></div>
     <div class="overlay-dark"></div>
     <div class="content-overlay">

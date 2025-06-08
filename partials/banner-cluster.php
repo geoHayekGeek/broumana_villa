@@ -1,3 +1,5 @@
+<link rel="preload" as="image" href="<?php echo SITE_URL?>/assets/images/banner-images/<?php echo htmlspecialchars($backgroundImage); ?>">
+
 <div class="cluster-banner-container">
     <!-- Background Image -->
     <div class="cluster-banner-bg" style="background-image: url('<?php echo SITE_URL?>/assets/images/banner-images/<?php echo htmlspecialchars($backgroundImage); ?>')"></div>
