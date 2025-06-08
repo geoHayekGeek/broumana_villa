@@ -125,4 +125,32 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", handleScroll);
   handleScroll();
 
+  /**PARALLAX EFFECT ON BACKGROUND IMAGE */
+  const velocity = 0.5;
+
+  function updateParallax() {
+    const sections = document.querySelectorAll('.parallax-section');
+    const scrollTop = window.pageYOffset;
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      const offsetTop = scrollTop + rect.top;
+      const sectionHeight = section.offsetHeight;
+
+      // Check if section is in the viewport
+      if (
+        scrollTop + window.innerHeight > offsetTop &&
+        scrollTop < offsetTop + sectionHeight
+      ) {
+        const scrollOffset = scrollTop - offsetTop;
+        const bg = section.querySelector('.parallax-bg');
+
+        // Adjust transform based on velocity
+        bg.style.transform = `translateY(${scrollOffset * velocity}px)`;
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateParallax);
+
 });

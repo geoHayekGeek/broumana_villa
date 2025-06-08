@@ -1262,7 +1262,7 @@ button:focus:not(:focus-visible) {
   margin-bottom: 6px;
   display: block;
   color: var(--text-dark);
-  text-align: start;
+  text-align: start ;
 }
 
 .contact-form .form-control {
