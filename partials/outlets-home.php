@@ -5,7 +5,7 @@ function renderOutletsByCluster($outlets, $clusterId)
     foreach ($outlets as $outlet) {
         if ($outlet['cluster_id'] == $clusterId) {
             echo '<div class="col-5 col-sm-4 col-lg-2 single-outlet" onclick="window.open(\'' . SITE_URL . "/outlet.php?id=" . htmlspecialchars($outlet['id']) . '\', \'_blank\')">';
-            echo '<img src="' . SITE_URL . '/assets/images/logos/' . htmlspecialchars($outlet['logo']) . '" alt="" class="outlet-logo">';
+            echo '<img data-src="' . SITE_URL . '/assets/images/logos/' . htmlspecialchars($outlet['logo']) . '" alt="" class="outlet-logo lazy-img">';
             echo '</div>';
         }
     }

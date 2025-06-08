@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="col-md-6 about-images-container">
-            <img src="./assets/images/home/broumana-villa/<?php echo $aboutImage; ?>" alt="" class="about-images">
+            <img data-src="./assets/images/home/broumana-villa/<?php echo $aboutImage; ?>" alt="" class="about-images lazy-img">
         </div>
     </div>
 </div>
