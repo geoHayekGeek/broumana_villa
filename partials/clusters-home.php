@@ -4,7 +4,7 @@
         <!-- Column One -->
         <div class="col-md-4 clickable-div">
             <div class="img-container">
-                <img src="<?php echo SITE_URL; ?>/assets/images/home/broumana-yard/<?php echo $yardSecondaryImage ?>" alt="Person on a balcony overlooking the sea" class="clusters-img">
+                <img data-src="<?php echo SITE_URL; ?>/assets/images/home/broumana-yard/<?php echo $yardSecondaryImage ?>" alt="Person on a balcony overlooking the sea" class="clusters-img lazy-img">
             </div>
             <div class="animated-divider"></div>
             <div class="category-label"><?php echo $yardTitle; ?></div>
@@ -21,7 +21,7 @@
         <!-- Column Two -->
         <div class="col-md-4 clickable-div">
             <div class="img-container">
-                <img src="<?php echo SITE_URL; ?>/assets/images/home/broumana-villa/<?php echo $villaSecondaryImage ?>" alt="Person on a balcony overlooking the sea" class="clusters-img">
+                <img data-src="<?php echo SITE_URL; ?>/assets/images/home/broumana-villa/<?php echo $villaSecondaryImage ?>" alt="Person on a balcony overlooking the sea" class="clusters-img lazy-img">
             </div>
             <div class="animated-divider"></div>
             <div class="category-label"><?php echo $villaTitle; ?></div>
@@ -37,7 +37,7 @@
         <!-- Column Three -->
         <div class="col-md-4 clickable-div">
             <div class="img-container">
-                <img src="<?php echo SITE_URL; ?>/assets/images/home/broumana-square/<?php echo $squareSecondaryImage ?>" alt="Person on a balcony overlooking the sea" class="clusters-img">
+                <img data-src="<?php echo SITE_URL; ?>/assets/images/home/broumana-square/<?php echo $squareSecondaryImage ?>" alt="Person on a balcony overlooking the sea" class="clusters-img lazy-img">
             </div>
             <div class="animated-divider"></div>
             <div class="category-label"><?php echo $squareTitle; ?></div>
