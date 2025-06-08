@@ -51,6 +51,8 @@ $page_title = isset($page_name) ? get_page_title($page_name) : get_page_title();
     <link rel="shortcut icon" href="<?php echo SITE_URL; ?>/assets/images/logos/broumana-villa-logo-1.png" type="image/x-icon">
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+
+    <link rel="preload" as="image" href="<?php echo SITE_URL; ?>/assets/images/logos/broumana-villa-logo-1.png" type="image/png">
 </head>
 
 <body>
