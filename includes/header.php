@@ -54,11 +54,11 @@ $page_title = isset($page_name) ? get_page_title($page_name) : get_page_title();
 </head>
 
 <body>
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="logo-container">
             <img src="<?php echo SITE_URL; ?>/assets/images/logos/broumana-villa-logo-1.png" alt="<?php echo SITE_NAME; ?>" class="preloader-logo">
         </div>
-    </div>
+    </div> -->
     <header class="site-header">
         <!-- Animated navbar -->
         <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
