@@ -324,6 +324,9 @@ button:focus:not(:focus-visible) {
   border-radius: 15px;
   color: var(--accent-color);
   transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .custom-button-transparent-green:hover {
@@ -1262,7 +1265,7 @@ button:focus:not(:focus-visible) {
   margin-bottom: 6px;
   display: block;
   color: var(--text-dark);
-  text-align: start ;
+  text-align: start;
 }
 
 .contact-form .form-control {
