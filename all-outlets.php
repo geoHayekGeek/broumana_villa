@@ -1,7 +1,7 @@
 <?php include_once "./includes/header.php"; ?>
 
 <?php
-$backgroundImage = "broumana-villa-night.jpg";
+$backgroundImage = "broumana-villa-night.webp";
 ?>
 
 <?php
